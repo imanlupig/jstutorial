@@ -63,18 +63,33 @@
 
 // callbacks & foreach
 
-const myFunc = (callbackFunc) => {
-  let value = 50;
-  callbackFunc(value);
-};
+// const myFunc = (callbackFunc) => {
+//   let value = 50;
+//   callbackFunc(value);
+// };
 
-myFunc(function(value){
-  console.log(value);
-});
+// myFunc(function(value){
+//   console.log(value);
+// });
+
+// let people = ['mario', 'luigi', 'ryu', 'peach', 'shen'];
+
+// const logPerson = (person, index) => console.log(`${index} - Hello ${person}`);
+// people.forEach(logPerson);
+
+// people.forEach((person,index) => console.log('position: ' + index, person));
+
+
+// get a reference to the 'ul'
+const ul = document.querySelector('.people');
 
 let people = ['mario', 'luigi', 'ryu', 'peach', 'shen'];
 
-const logPerson = (person, index) => console.log(`${index} - Hello ${person}`);
-people.forEach(logPerson);
+let html = ``;
 
-// people.forEach((person,index) => console.log('position: ' + index, person));
+people.forEach(person => {
+  html += `<li style='color: purple'> ${person} </li>`
+});
+
+console.log(html);
+ul.innerHTML = html;
