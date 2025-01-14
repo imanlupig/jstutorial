@@ -30,24 +30,35 @@
 // console.log(paras[0]);
 
 
-let para1 = document.querySelector('p');
-// para1.innerText = " ninjas are cool";
-// console.log(para1);
+// let para1 = document.querySelector('p');
+// // para1.innerText = " ninjas are cool";
+// // console.log(para1);
 
-let paras = document.querySelectorAll('p');
-// paras.forEach(para => {
-//   console.log(para.innerText);
-//   para.innerText += '!';
+// let paras = document.querySelectorAll('p');
+// // paras.forEach(para => {
+// //   console.log(para.innerText);
+// //   para.innerText += '!';
+// // })
+
+// let content = document.querySelector('.content');
+// // console.log(content.innerHTML);
+// // content.innerHTML += '<h2>this is a new h2</h2>';
+// // console.log(content.innerHTML)
+
+// const people = ['ian', 'mario', 'luigi', 'yoshi'];
+
+// people.forEach(person => {
+//   content.innerHTML += `<p>${person}</p>`;
 // })
 
-let content = document.querySelector('.content');
-// console.log(content.innerHTML);
-// content.innerHTML += '<h2>this is a new h2</h2>';
-// console.log(content.innerHTML)
+const link = document.querySelector('a');
+console.log(link.getAttribute('href'));
+link.setAttribute('href', 'https://youtube.com');
+link.innerText = 'YouTube.com';
+console.log(link.getAttribute('href'));
 
-const people = ['ian', 'mario', 'luigi', 'yoshi'];
-
-people.forEach(person => {
-  content.innerHTML += `<p>${person}</p>`;
-})
-
+const mssg = document.querySelector('p');
+console.log(mssg.getAttribute('class'));
+mssg.setAttribute('class', 'success');
+mssg.setAttribute('style', 'color: green');
+console.log(mssg.getAttribute('class'));
