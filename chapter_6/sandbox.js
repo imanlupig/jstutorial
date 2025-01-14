@@ -63,10 +63,34 @@
 // mssg.setAttribute('style', 'color: green');
 // console.log(mssg.getAttribute('class'));
 
-const title = document.querySelector('h1');
+// const title = document.querySelector('h1');
 
-// title.setAttribute('style','margin: 50px');
-console.log(title.style);
-title.style.margin = '50px';
-title.style.color = 'crimson';
-title.style.fontSize = '60px';
+// // title.setAttribute('style','margin: 50px');
+// console.log(title.style);
+// title.style.margin = '50px';
+// title.style.color = 'crimson';
+// title.style.fontSize = '60px';
+
+// let content = document.querySelector('p');
+// console.log(content.classList);
+// content.classList.add('error');
+// console.log(content.classList);
+// content.classList.remove('error');
+// console.log(content.classList);
+// content.classList.add('success');
+
+const paras = document.querySelectorAll('p');
+console.log(paras);
+
+paras.forEach(para =>{
+  if(para.textContent.includes('error')){
+    para.classList.add('error');
+  } else if (para.textContent.includes('success')){
+    para.classList.add('success');
+  }
+});
+
+
+const title = document.querySelector('.title');
+title.classList.toggle('test');
+title.classList.toggle('test');
